@@ -2,8 +2,6 @@
 
 Simple audio features extractor made for [CVPR 2022 - Workshop on Media Forensics](https://sites.google.com/view/mediaforensics2022/).
 
-⚠️ TODO: I have to update the models, the current ones could not work properly ⚠️, but the based logic and the feature extraction is the one described in the paper.
-
 ## Requirements
 
 Install Python3.9.12+ and the related dependencies using:

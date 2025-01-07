@@ -1,6 +1,6 @@
-# fake-audio-detector
+# audio features extractor
 
-Simple fake audio detector made for [CVPR 2022 - Workshop on Media Forensics](https://sites.google.com/view/mediaforensics2022/).
+Simple audio features extractor made for [CVPR 2022 - Workshop on Media Forensics](https://sites.google.com/view/mediaforensics2022/).
 
 ## Requirements
 
@@ -12,7 +12,7 @@ pip3 install -r requirements.txt
 
 ## Usage
 
-Run the `main.py` file giving as input the path of the audio that you want to check through the trained model ADC.
+Run the `main.py` file giving as input the path of the audio that you want to extract the features.
 
 Example:
 
@@ -20,7 +20,8 @@ Example:
 python3 main.py "data/sample.wav"
 ```
 
-The result will be `The sample audio is fake` or `The sample audio is real`.
+The result will be a list of specific audio features saved in the file `output_features.csv`.
+
 Feel free to re-use the feature extraction script, if you have any issues or questions about this script [open an issue](https://github.com/UNICT-Fake-Audio/fake-audio-detector/issues/new).
 
 ## Reference

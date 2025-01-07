@@ -2,6 +2,7 @@ import numpy as np
 import soundfile as sf
 from spafe.features.spfeats import extract_feats
 from pydub.utils import mediainfo
+import math
 from shared.constants import DROP_FEATURES, SP_FEATS_NAMES, SPECTRAL_COMPLEX_VALUES, SPECTRUM_FEATURES
 
 from spafe.features.mfcc import mfcc, imfcc
@@ -59,10 +60,17 @@ def filter_features(features: dict) -> list[float]:
     return list(filtered_features.values())
 
 
+def filter_nan(features: dict) -> dict:
+    for f in features:
+        if math.isnan(float(features[f])):
+            features[f] = 0
+    return features
+
+
 def get_all_features_from_sample(file_path: str) -> list[float]:
     sp_feats = extract_sp_feats(file_path)
     media_info = extract_media_info(file_path)
     spectrum_data = extract_spectrum_data(file_path)
     features = sp_feats | media_info | spectrum_data
+    features = filter_nan(features)
     return filter_features(features)
-

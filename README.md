@@ -24,6 +24,10 @@ The result will be a list of specific audio features saved in the file `output_f
 
 Feel free to re-use the feature extraction script, if you have any issues or questions about this script [open an issue](https://github.com/UNICT-Fake-Audio/fake-audio-detector/issues/new).
 
+### Explore features via web application
+
+These features can be explored in the main synthetic audio datasets using this [web application](https://unict-fake-audio.github.io/audio-datasets-overview/#/datasets?feature=bit_rate&system_id=A07_A19&speaker=LA_0012&feature_per_speaker=1&dataType=0&dataset=ASVSPOOF_2019_LA&algorithm=false).
+
 ## Reference
 
 [Is synthetic voice detection research going into the right direction?](https://paperswithcode.com/paper/is-synthetic-voice-detection-research-going)
